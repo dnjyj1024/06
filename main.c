@@ -3,13 +3,34 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int square(int a)
+int factorial(int x)
 {
-	return(a*a);
+	int res = 1;
+	int i;
+	for (i=1;i<x+1;i++){
+		res = res*i;
+	}			
+	return res;	
 }
 
+int combination(int n, int r)
+{
+	int a;
+	int b;
+	int c;
+	int res1;
+	a = factorial(n);
+	b = factorial(n-r);
+	c = factorial(r);
+	res1 = a/(b*c);
+	return(res1);
+}
+
+
+
 int main(){
-	int a = 2;
-	a = square(a);
-	printf("a=%i\n",a);
+	int res2;
+	res2 = combination(10,2);
+	printf("%i",res2);
+
 }

@@ -30,7 +30,11 @@ int combination(int n, int r)
 
 int main(){
 	int res2;
-	res2 = combination(10,2);
+	int n;
+	int r;
+	printf("정수를 입력하세요:");
+	scanf("%d %d",&n,&r); 
+	res2 = combination(n,r);
 	printf("%i",res2);
 
 }
